@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>EngSciMath</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+  <div>
+    <h2>Welcome to EngSciMath!</h2>
+    <p> Are you a STEM student or professional who cares about: </p>
+    <ul class="list-group">
+      <li class="list-group-item">Renewable energy?</li>
+      <li class="list-group-item">Environmental sustainability?</li>
+      <li class="list-group-item">Wealth inequality?</li>
+      <li class="list-group-item">Ending war?</li>
+      <li class="list-group-item">Free education for all?</li>
+      <li class="list-group-item">Healthcare as a human right?</li>
+      <li class="list-group-item">Terminating systems of oppression?</li>
+      <li class="list-group-item">More funding for research and staff?</li>
+      <li class="list-group-item">Fighting fascism?</li>
+      <li class="list-group-item">Eliminating exploitative labor practices in work and academia?</li>
+    </ul>
+    <p>Then this is the place for you!</p>
+    <i>Folks from outside STEM who care about these issues are more than welcome too!</i>
+    <h3>Tell us about yourself</h3>
+  </div>
+  <div>
+    <form action="" method="post" novalidate>
+      {{ form.hidden_tag() }}
+      <div class="form-group">
+        <p>
+            {{ form.email.label }}<br>
+            {{ form.email(size=64) }}
+        </p>
+      </div>
+      <div class="form-group">
+        <p>
+            {{ form.blurb.label }}<br>
+            {{ form.blurb(cols="64", rows="12") }}
+        </p>
+      </div>
+      <p>{{ form.submit(class="btn btn-default") }}</p>
+    </form>
+  </div>
+</div>
+</body>
+</html>
