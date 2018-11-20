@@ -1,52 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>EngSciMath</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
-<div class="container-fluid">
-  <div>
-    <h2>Welcome to EngSciMath!</h2>
-    <p> Are you a STEM student or professional who cares about: </p>
-    <ul class="list-group">
-      <li class="list-group-item">Renewable energy?</li>
-      <li class="list-group-item">Environmental sustainability?</li>
-      <li class="list-group-item">Wealth inequality?</li>
-      <li class="list-group-item">Ending war?</li>
-      <li class="list-group-item">Free education for all?</li>
-      <li class="list-group-item">Healthcare as a human right?</li>
-      <li class="list-group-item">Terminating systems of oppression?</li>
-      <li class="list-group-item">More funding for research and staff?</li>
-      <li class="list-group-item">Fighting fascism?</li>
-      <li class="list-group-item">Eliminating exploitative labor practices in work and academia?</li>
-    </ul>
-    <p>Then this is the place for you!</p>
-    <i>Folks from outside STEM who care about these issues are more than welcome too!</i>
-    <h3>Tell us about yourself</h3>
-  </div>
-  <div>
-    <form action="" method="post" novalidate>
-      {{ form.hidden_tag() }}
-      <div class="form-group">
-        <p>
-            {{ form.email.label }}<br>
-            {{ form.email(size=64) }}
-        </p>
-      </div>
-      <div class="form-group">
-        <p>
-            {{ form.blurb.label }}<br>
-            {{ form.blurb(cols="64", rows="12") }}
-        </p>
-      </div>
-      <p>{{ form.submit(class="btn btn-default") }}</p>
-    </form>
-  </div>
-</div>
-</body>
+	<head>
+		<title>EngSciMath</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style>
+            form * {
+                max-width: 100%;
+            }
+
+            form label {
+                max-width: 500px;
+            }
+
+            p {
+                font-size: 18px;
+            }
+
+            input.btn.btn-default.btn-red {
+                background-color: #de0000;
+                border-color: #de0000;
+                color: white;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+
+            .vspace {
+                height: 60px;
+            }
+
+            .form-group {
+                margin-bottom: 30px;
+            }
+        </style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-8 col-md-offset-2">
+					<div class="text-center">
+						<img src="#"/>
+						<h2>
+							EngSciMath
+						</h2>
+					</div>
+
+					<p>
+						EngSciMath is a coalition of people committed to building a better connection between the fields
+						of science, technology, engineering, and mathematics, and the worldwide socialist community.
+					</p>
+					<a href="#">
+						Link to the Community Guidelines PDF
+					</a>
+				</div>
+			</div>
+
+            <div class="vspace"></div>
+
+            <div class="row">
+                <div class="col-xs-12 col-md-8 col-md-offset-2">
+                    <h3 class="text-center">
+                        To join the coalition:
+                    </h3>
+
+                    <div class="text-center">
+                        <form action="" method="post" novalidate>
+                            {{ form.hidden_tag() }}
+                            <div class="form-group">
+                                {{ form.email.label }}<br>
+                                {{ form.email(size=64) }}
+                            </div>
+                            <div class="form-group">
+                                {{ form.blurb.label }}<br>
+                                {{ form.blurb(cols="64", rows="4") }}
+                            </div>
+                            <div class="form-group text-center">
+                                {{ form.submit(class="btn btn-default btn-red btn-lg") }}
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+		    <div class="row">
+                <div class="col-xs-12 col-md-8 col-md-offset-2">
+                    <p>
+                        Notes:
+                    </p>
+                    <ul>
+                        <li>
+                            Take whatever precautions you feel necessary regarding your personal identification. We
+                            have not had any issues to date, however, there is always some risk with political endeavors.
+                            Joining anonymously is perfectly fine you can use a protonmail or similar encrypted emails if
+                            you so choose.
+                        </li>
+                        <li>
+                            Please introduce yourself in the <strong>#introductions</strong> channel when you get on board
+                        </li>
+                    </ul>
+                </div>
+            </div>
+		</div>
+	</body>
 </html>
